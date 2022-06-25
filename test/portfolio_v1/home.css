@@ -158,3 +158,24 @@ button:hover {
   transform: translate(0, -.07rem);
 }
 /* nav bar end */
+
+/* summary section start */
+.summary-title {
+  margin: 1rem auto;
+  text-align: center;
+}
+.summary-container {
+  display: flex;
+  margin: 0 2rem 2rem 2rem;
+}
+.summary-container h2 {
+  text-align: center;
+}
+.summary-container div {
+  padding: 0 2rem;
+}
+/* summary section end */
+
+.end-block {
+  background-color: magenta;
+}
