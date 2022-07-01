@@ -14,10 +14,10 @@
       <!-- navbar start -->
       <nav>
         <ul class="nav-links">
-          <li><a href="#">Web Dev</a></li>
-          <li><a href="#">Music</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#web-dev">Web Dev</a></li>
+          <li><a href="#music">Music</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
       <!-- navbar end -->
@@ -49,7 +49,7 @@
       </div>
     </header>
     <!-- header end -->
-    <section class="section-projects">
+    <section class="section-projects" id="web-dev">
       <div class="projects-heading">
         <h1>Web Projects</h1>
       </div>
@@ -103,8 +103,75 @@
       </div>
     </section>
     <!-- projects section end -->
+
+    <!-- music section start -->
+    <section class="section-music" id="music">
+      <div class="music-heading">
+        <h1>Music Production</h1>
+      </div>
+      <div class="music-container">
+        <img class="music-img" src="imgs/recording-small.jpg" alt="" />
+        <div class="music-text">
+          <h3 class="music-title">Seekay</h3>
+          <p class="music-description">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et quaerat
+            ea architecto. Sapiente quod voluptas quae, nam veniam corrupti
+            consequatur quibusdam distinctio ducimus cum eveniet? Ab pariatur
+            dolor corporis dicta earum delectus explicabo recusandae doloribus
+            repudiandae alias aut, quos nobis? Perferendis cumque eos laboriosam
+            enim vel explicabo quam exercitationem libero.
+          </p>
+          <div class="songs-container">
+            <div class="songs-grid">
+              <div class="song song-1">
+                <div class="song-buffer">
+                  <div class="waveform" id="waveform-1"></div>
+                </div>
+                <div class="controls">
+                  <ion-icon class="music-icon play" name="play"></ion-icon>
+                  <ion-icon class="music-icon pause" name="pause"></ion-icon>
+                  <ion-icon class="music-icon stop" name="stop"></ion-icon>
+                </div>
+              </div>
+              <div class="song song-2">
+                <div class="song-buffer">
+                  <div class="waveform" id="waveform-2"></div>
+                </div>
+                <div class="controls">
+                  <ion-icon class="music-icon play" name="play"></ion-icon>
+                  <ion-icon class="music-icon pause" name="pause"></ion-icon>
+                  <ion-icon class="music-icon stop" name="stop"></ion-icon>
+                </div>
+              </div>
+              <div class="song song-3">
+                <div class="song-buffer">
+                  <div class="waveform" id="waveform-3"></div>
+                </div>
+                <div class="controls">
+                  <ion-icon class="music-icon play" name="play"></ion-icon>
+                  <ion-icon class="music-icon pause" name="pause"></ion-icon>
+                  <ion-icon class="music-icon stop" name="stop"></ion-icon>
+                </div>
+              </div>
+              <div class="song song-4">
+                <div class="song-buffer">
+                  <div class="waveform" id="waveform-4"></div>
+                </div>
+                <div class="controls">
+                  <ion-icon class="music-icon play" name="play"></ion-icon>
+                  <ion-icon class="music-icon pause" name="pause"></ion-icon>
+                  <ion-icon class="music-icon stop" name="stop"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- music section end -->
+
     <!-- contact section start -->
-    <section class="section-contact">
+    <!-- <section class="section-contact">
       <div class="contact-container">
         <div class="contact-text">
           <h3 class="contact-title">Need a Website?</h3>
@@ -122,50 +189,9 @@
           <button>Send</button>
         </form>
       </div>
-    </section>
+    </section> -->
     <!-- contact section end -->
 
-    <!-- navbar start -->
-    <nav>
-      <a class="logo" href="#">Erick Alvarez</a>
-      <ul class="nav-links">
-        <li><a href="#">Web Dev</a></li>
-        <li><a href="#">Music</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-      <a href="#"><button class="contact">Contact</button></a>
-    </nav>
-    <!-- navbar end -->
-    <!-- summary section start -->
-    <section class="summary">
-      <h1 class="summary-title">What I Do</h1>
-      <div class="summary-container">
-        <div class="summary-web-dev">
-          <h2>Web Development</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus sed
-            nam officiis, non saepe expedita libero voluptates, animi nemo vero
-            unde eius ab fugiat nihil velit veritatis modi quo, excepturi
-            cupiditate consequuntur reiciendis sunt. Voluptatem sequi corporis
-            reiciendis, temporibus sunt ducimus praesentium laboriosam? Adipisci
-            tempore accusamus dicta at commodi est.
-          </p>
-        </div>
-        <div class="summary-web-dev">
-          <h2>Music Production</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus sed
-            nam officiis, non saepe expedita libero voluptates, animi nemo vero
-            unde eius ab fugiat nihil velit veritatis modi quo, excepturi
-            cupiditate consequuntur reiciendis sunt. Voluptatem sequi corporis
-            reiciendis, temporibus sunt ducimus praesentium laboriosam? Adipisci
-            tempore accusamus dicta at commodi est.
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- summary section end -->
-    <h1 class="end-block">Erick Alvarez Personal Website</h1>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -174,5 +200,9 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+
+    <!-- <script src="https://unpkg.com/wavesurfer.js"></script> -->
+    <script src="./scripts/wavesurfer.js"></script>
+    <script src="./scripts/music.js"></script>
   </body>
 </html>
