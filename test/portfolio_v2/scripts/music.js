@@ -30,15 +30,21 @@ waveform_params['container'] = '#waveform-3'
 const wavesurfer_3 = WaveSurfer.create(waveform_params)
 waveform_params['container'] = '#waveform-4'
 const wavesurfer_4 = WaveSurfer.create(waveform_params)
+waveform_params['container'] = '#waveform-5'
+const wavesurfer_5 = WaveSurfer.create(waveform_params)
+waveform_params['container'] = '#waveform-6'
+const wavesurfer_6 = WaveSurfer.create(waveform_params)
 
 // load wavesurfer audio
 const songNames = [
     './audio/gotta_gotta.mp3',
     './audio/ciego.mp3',
     './audio/drip_drop.mp3',
-    './audio/run_on_by.mp3'
+    './audio/run_on_by.mp3',
+    './audio/last_night.mp3',
+    './audio/unwritten.mp3'
 ]
-const wavesurfers = [wavesurfer_1, wavesurfer_2, wavesurfer_3, wavesurfer_4]
+const wavesurfers = [wavesurfer_1, wavesurfer_2, wavesurfer_3, wavesurfer_4, wavesurfer_5, wavesurfer_6]
 for (let i = 0; i < wavesurfers.length; i++){
     wavesurfers[i].load(songNames[i])
 }
