@@ -384,6 +384,13 @@ nav {
   align-items: center;
   margin-top: 1rem;
   padding: .5rem 0;
+  transition: all 0.2s ease-out;
+  border: none;
+  box-shadow: var(--box-shadow);
+}
+.erick-email:hover {
+  cursor: pointer;
+  transform: translateY(-.2rem);
 }
 .erick-email h3 {
   background-color: var(--color-two);
