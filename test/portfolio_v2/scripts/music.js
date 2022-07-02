@@ -49,18 +49,20 @@ pauseBtns = document.querySelectorAll(".pause");
 stopBtns = document.querySelectorAll(".stop");
 
 for (let i = 0; i < wavesurfers.length; i++){
-    console.log("worked!")
+    // add play functionality
     playBtns[i].onclick = function(){
-        wavesurfers[i].playPause();
         //  must pause all other songs to prevent multiple plays
         for (let j = 0; j < wavesurfers.length; j++){
             if (i === j) { continue }
             else { wavesurfers[j].pause() }
         }
+        wavesurfers[i].playPause();
     }
+    // add pause functionality
     pauseBtns[i].onclick = function(){
         wavesurfers[i].playPause();
     }
+    // add stop functionality
     stopBtns[i].onclick = function(){
         wavesurfers[i].stop();
     }

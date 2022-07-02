@@ -1,51 +1,5 @@
-/* within the /public folder */
-@font-face {
-  font-family: "Roboto";
-  src: url("/fonts/Roboto/Roboto-Medium.ttf");
-  format: ("truetype");
-  font-weight: normal;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("/fonts/Roboto/Roboto-Bold.ttf");
-  format: ("truetype");
-  font-weight: bold;
-}
-@font-face {
-  font-family: "Lato";
-  src: url("fonts/Lato/Lato-Regular.ttf");
-  format: ("truetype");
-  font-weight: normal;
-}
-@font-face {
-  font-family: "Lato";
-  src: url("fonts/Lato/Lato-Bold.ttf");
-  format: ("truetype");
-  font-weight: bold;
-}
-@font-face {
-  font-family: "Lato";
-  src: url("fonts/Lato/Lato-Black.ttf");
-  format: ("truetype");
-  font-weight: 900;
-}
-
-
-:root {
-  /* start variable definitions */
-  --color-one: #C7E8F3;
-  --color-two: #151E3F;
-  --color-three: #003566;
-  --color-four: #ffc300;
-  --color-five: #ffd60a;
-  --color-six: #FFDD33;
-  --color-contact-button: var(--color-four); 
-  --color-text: white;
-  --box-shadow: 0.25rem 0.25rem 0.75rem rgba(0,0,0,.25);
-  --mac-screen-height: 38.5rem;
-  /* end variable definitions */
-  scroll-behavior: smooth;
-}
+/* import variables */
+@import url("variables.css");
 
 * {
   box-sizing: border-box;
@@ -53,7 +7,6 @@
   padding: 0;
   font-family: "Lato", sans-serif;
   color: white;
-  /* font-weight: normal; */
 }
 
 li, a, button {
@@ -267,13 +220,14 @@ nav {
   height: 85%;
   width: 90%;
   margin: 0 auto;
-  padding-top: 1rem;
+  padding-top: 2rem;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   /* border: 2px solid green; */
 }
 .music-img {
+  margin-top: 1.5rem;
   height: 23rem;
   width: 22rem;
   object-fit: fill;
@@ -285,9 +239,14 @@ nav {
   /* border: 2px solid white; */
 }
 .music-title {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: white;
+  width: min-content;
+}
+.music-description {
+  margin-top: 2rem;
+  padding: 0;
 }
 .songs-container {
   margin-top: 3rem;
@@ -356,52 +315,130 @@ nav {
 
 /* section contact start */
 .section-contact {
+  /* height: calc(var(--mac-screen-height) * .7); */
   height: var(--mac-screen-height);
   width: 100%;
   background-color: var(--color-seven);
 }
 .contact-container {
+  padding-top: 4rem;
   height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* border: 3px solid green; */
+}
+.contact-contents {
+  /* height: 50%; */
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  border: 3px solid green;
+  /* border: 3px solid magenta; */
 }
-.contact-text {
-  height: 10rem;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 3px solid magenta;
+/* .contents-web {
+  
+} */
+.contents-music {
+  flex-direction: row-reverse;
+  padding-right: 10%;
+  position: relative;
+  top: -2rem;
 }
 .contact-title {
-  margin-bottom: 1rem;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: bold;
+  /* width: max-content; */
+  /* margin-left: 10%; */
+  /* border: 1px solid blue; */
 }
-.contact-desc {
-  width: 60%;
+.contents-web h3 {
+  text-align: left;
+  margin-left: 15%;
+  /* margin-right: 5%; */
 }
-.contact-form {
-  width: 50%;
+.contents-music h3 {
+  text-align: right;
+  margin-right: 10%;
+}
+.contact-contents img {
+  /* width: 80%; */
+  height: 13rem;
+  /* border: solid 1px black; */
+}
+.contact-business-img {
+  margin-right: 6%;
+}
+.contact-music-img {
+  margin-left: 4%;
+}
+.erick-email {
+  background-color: var(--color-two);
+  border-radius: .75rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  border: 3px solid green;
+  margin-top: 1rem;
+  padding: .5rem 0;
 }
-.contact-form label, input{
-  display: block;
-  width: 50%;
+.erick-email h3 {
+  background-color: var(--color-two);
+  width: 20rem;
+  height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  border-radius: .75rem;
 }
-
-/* .contact-form input {
-  display: block;
-} */
 /* section contact end */
 
-
-.end-block {
-  background-color: magenta;
+/* footer start */
+footer {
+  background-color: var(--color-two);
+  height: 12rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 2.5rem;
 }
+/* .name-container {
+  display: flex;
+  flex-direction: space-around;
+} */
+.name-container {
+  margin-left: 17%;
+}
+.name-container span {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.last {
+  margin-bottom: .75rem;
+}
+.name {
+  margin-top: .2rem;
+}
+.contact-links {
+  margin-right: 17%;
+}
+.contact-links p {
+  font-size: 1.25rem;
+}
+.contact-links ul {
+  display: flex;
+  margin-top: .65rem;
+}
+.contact-links li {
+  list-style: none;
+}
+.contact-links li a {
+  font-size: 2rem;
+  margin-right: .75rem;
+}
+/* footer end */

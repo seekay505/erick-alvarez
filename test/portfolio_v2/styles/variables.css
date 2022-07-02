@@ -1,0 +1,47 @@
+/* within the /public folder */
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto/Roboto-Medium.ttf");
+    format: ("truetype");
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto/Roboto-Bold.ttf");
+    format: ("truetype");
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: "Lato";
+    src: url("fonts/Lato/Lato-Regular.ttf");
+    format: ("truetype");
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: "Lato";
+    src: url("fonts/Lato/Lato-Bold.ttf");
+    format: ("truetype");
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: "Lato";
+    src: url("fonts/Lato/Lato-Black.ttf");
+    format: ("truetype");
+    font-weight: 900;
+  }
+
+:root {
+    /* start variable definitions */
+    --color-one: #65c0df;
+    --color-two: #151E3F;
+    --color-three: #003566;
+    --color-four: #ffc300;
+    --color-five: #ffd60a;
+    --color-six: #FFDD33;
+    --color-seven: #f7b90d;
+    --color-text: white;
+    --box-shadow: 0.25rem 0.25rem 0.75rem rgba(0,0,0,.25);
+    --mac-screen-height: 38.5rem;
+    /* end variable definitions */
+    scroll-behavior: smooth;
+  }
