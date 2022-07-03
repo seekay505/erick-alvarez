@@ -690,13 +690,26 @@ footer {
     width: 100%;
     padding: 0 3%;
   }
+  .project {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: min-content;
+  }
+  .proj-img {
+    width: 85%;
+    height: 10rem;
+  }
+  .project:not(:first-child) {
+    margin-top: 1rem;
+  }
+  .proj-text {
+    width: 85%;
+  }
   .projects-heading h1 {
     padding-left: 0;
     text-align: center;
-  }
-  .proj-text {
-    margin-left: 1rem;
-  }
+  }  
   .music-heading h1 {
     padding-left: 0;
     text-align: center;
