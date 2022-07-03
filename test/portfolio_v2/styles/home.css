@@ -23,7 +23,8 @@ html, body {
 header {
   background-color: var(--color-three);
   color: white;
-  height: var(--mac-screen-height);
+  /* height: var(--mac-screen-height); */
+  height: 100vh;
   width: 100%;
   /* display: flex;
   justify-content: space-around; */
@@ -142,8 +143,9 @@ nav {
 
 /* section projects start */
 .section-projects {
-  height: var(--mac-screen-height);
+  /* height: var(--mac-screen-height); */
   width: 100%;
+  padding-bottom: 2rem;
   background-color: var(--color-four);
   color: white;
 }
@@ -157,7 +159,7 @@ nav {
   /* align-self: flex-end; */
 }
 .projects-container {
-  height: 85%;
+  /* height: 100%; */
   width: 95%;
   margin: 1rem auto 0 auto;
   display: flex;
@@ -200,12 +202,13 @@ nav {
 
 /* section music start */
 .section-music {
-  height: var(--mac-screen-height);
+  /* height: var(--mac-screen-height); */
   width: 100%;
   background-color: var(--color-three);
   color: white;
   margin-bottom: 0;
-  padding-bottom: 0;
+  padding-bottom: 4rem;
+  /* border: solid 1px beige; */
 }
 .music-heading {
   height: 15%;
@@ -220,7 +223,8 @@ nav {
   height: 85%;
   width: 90%;
   margin: 0 auto;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
@@ -236,6 +240,7 @@ nav {
   margin-right: 2rem;
 }
 .music-text {
+  /* padding: 0 3rem 0 4rem; */
   padding: 0 3rem;
   height: 100%;
   width: 70%;
@@ -247,10 +252,6 @@ nav {
   color: white;
   width: min-content;
 }
-/* .music-description {
-  margin-top: 2rem;
-  padding: 0;
-} */
 .songs-container {
   margin-top: 2rem;
   display: flex;
@@ -319,77 +320,74 @@ nav {
 
 /* section contact start */
 .section-contact {
-  /* height: calc(var(--mac-screen-height) * .7); */
-  height: var(--mac-screen-height);
   width: 100%;
   background-color: var(--color-seven);
+  padding-bottom: 2rem;
 }
 .contact-container {
-  padding-top: 4rem;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
-  /* border: 3px solid green; */
-}
-.contact-contents {
-  /* height: 50%; */
+  padding-top: 3rem;
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  align-items: center;
+  /* border: 5px solid green; */
+}
+.contact-contents {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   /* border: 3px solid magenta; */
 }
-/* .contents-web {
-  
-} */
+.contents-web {
+  align-items: flex-start;
+  margin: 0 auto;
+}
 .contents-music {
-  flex-direction: row-reverse;
-  padding-right: 10%;
-  position: relative;
-  top: -2rem;
+  align-items: flex-end;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .contact-title {
   font-size: 3.5rem;
   font-weight: bold;
-  /* width: max-content; */
-  /* margin-left: 10%; */
   /* border: 1px solid blue; */
 }
 .contents-web h3 {
-  text-align: left;
-  margin-left: 15%;
-  /* margin-right: 5%; */
+  /* margin-left: 5%; */
+  margin-bottom: 2rem;
 }
 .contents-music h3 {
-  text-align: right;
   margin-right: 10%;
+  order: 2;
 }
 .contact-contents img {
-  /* width: 80%; */
+  display: block;
   height: 13rem;
   /* border: solid 1px black; */
 }
 .contact-business-img {
-  margin-right: 6%;
+  margin-left: 1%;
 }
 .contact-music-img {
-  margin-left: 4%;
+  margin-right: 8%;
+  order: 1;
+  margin-bottom: 2rem;
 }
 .erick-email {
+  width: min-content;
+  margin: 0 auto;
   background-color: var(--color-two);
   border-radius: .75rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 3rem;
   padding: .5rem 0;
   transition: all 0.2s ease-out;
-  border: none;
   box-shadow: var(--box-shadow);
 }
 .erick-email:hover {
@@ -453,3 +451,11 @@ footer {
   margin-right: .75rem;
 }
 /* footer end */
+
+/* responsive start */
+@media (max-width: 1075px) {
+  .contact-title {
+    font-size: 3rem;
+  }
+}
+/* responsive end */
