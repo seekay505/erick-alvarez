@@ -17,7 +17,7 @@ app.use("/", homeRouter);
 // about routes
 app.use("/about", aboutRouter);
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Connected to port ${port}`);
 });
