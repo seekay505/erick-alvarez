@@ -1,101 +1,780 @@
-/* within the /public folder */
-@font-face {
-  font-family: "Roboto";
-  src: url("/fonts/Roboto/Roboto-Light.ttf");
-  format: ("truetype");
-  font-weight: normal;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("/fonts/Roboto/Roboto-Bold.ttf");
-  format: ("truetype");
-  font-weight: bold;
-}
-
-:root {
-  --color-one: rgb(134, 187, 216);
-  --color-two: rgb(47, 72, 88);
-  --color-three: rgb(51, 101, 138);
-  --color-four: rgb(246, 174, 45);
-  --color-five: rgb(242, 100, 25);
-  --color-contact-button: rgba(55, 110, 150); 
-  --color-text: white;
-}
+/* import variables */
+@import url("variables.css");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
-}
-
-/* header start */
-header > h1 {
-  background-color: green;
-}
-#erick-img {
-
-}
-
-/* header end */
-
-/* nav bar start */
-nav {
-  background-color: var(--color-two);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; /* along main axis */
-  align-items: center; /* along perpendicular axis */
-  padding: 0.1rem 2%;
-
+  font-family: "Lato", sans-serif;
+  color: white;
 }
 
 li, a, button {
   text-decoration: none;
   font-size: 1rem;
-  font-weight: bold;
-  color: var(--color-text);
 }
 
-.logo {
-  cursor: "pointer";
+html, body {
+  height: 100%;
+  width: 100%;
 }
 
+/* header start */
+header {
+  background-color: var(--color-three);
+  color: white;
+  /* height: var(--mac-screen-height); */
+  height: 100vh;
+  width: 100%;
+  /* display: flex;
+  justify-content: space-around; */
+}
+/* navbar start */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: white;
+  padding-top: .75rem;
+  line-height: 2rem;
+  /* border: 1px solid orange; */
+}
 .nav-links {
   list-style: none;
+  display: inline;
+  /* float: right; */
+  /* border: solid 2px grey; */
 }
-
 .nav-links li {
-  display: inline-block;
-  padding: 0.5rem 1.25rem;
+  display: inline;
+  padding-right: 4.5rem;
 }
-
-.nav-links li a {
-  border-bottom: .2rem solid transparent;
-  transition: all .2s ease 0s;
-}
-
-.nav-links li a:hover{
-  border-bottom: .2rem solid;
-  border-bottom-color: white;
-}
-
-button {
-  padding: 0.3rem 1.563rem;
-  margin: .2rem;
-  background-color: var(--color-contact-button);
-  border: none;
-  border-radius: 2.2rem;
-  cursor: pointer;
-  transition: all .2s ease-in 0s;
-}
-
-button:hover {
-  transform: translate(0, -.07rem);
-}
-/* nav bar end */
-
-h1 {
-  background-color: magenta;
+.nav-links li a{
+  text-decoration: none;
+  color: white;
   font-weight: bold;
+  font-size: 1.1rem;
 }
+/* navbar end */
+
+/* intro start */
+.intro-container, .intro-img {
+  height: 30rem;
+}
+.intro-container {
+  height: calc(100% - 2rem);
+  width: 100%;
+  margin: 0 auto;
+  padding-top: .75rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid green; */
+}
+.intro-text {
+  height: 25rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: -4rem;
+  /* border: 2px solid magenta; */
+}
+.intro-greeting {
+  margin-bottom: 1.75rem;
+  font-weight: normal;
+  font-size: 3rem;
+}
+.erick {
+  font-weight: 900;
+  font-size: 4rem;
+}
+.intro-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 2rem;
+  color: black;
+  text-align: center;
+  width: 12.8rem;
+  border-radius: .5rem;
+}
+.intro-web-dev {
+  background-color: var(--color-four);
+  position: relative;
+  left: -1.5rem;
+}
+.intro-music-producer {
+  background-color: var(--color-six);
+  margin-top: 1rem;
+  position: relative;
+  left: 1.5rem;
+}
+.intro-description {
+  margin-top: 1.75rem;
+  font-size: 1.5rem;
+}
+.intro-img-container {
+  width: 50%;
+}
+.intro-img {
+  max-width: 30rem;
+  max-height: 30rem;
+  display: block;
+  position: relative;
+  left: 2rem;
+}
+/* social links start */
+.social-links {
+  margin-top: 1.5rem;
+  list-style: none;
+}
+.social-links li a {
+  font-size: 2.5rem;
+  color: white;
+  margin: 0 1rem;
+}
+/* social links end */
+
+/* intro end */
+/* header end */
+
+/* section projects start */
+.section-projects {
+  /* height: var(--mac-screen-height); */
+  width: 100%;
+  padding-bottom: 2rem;
+  background-color: var(--color-four);
+  color: white;
+}
+.projects-heading {
+  height: 15%;
+}
+.section-projects h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 2rem 0 0 2rem;
+  /* align-self: flex-end; */
+}
+.projects-container {
+  /* height: 100%; */
+  width: 95%;
+  margin: 2rem auto 0 auto;
+  display: flex;
+  align-items: flex-start;
+  /* border: 3px solid green; */
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: calc(50% - 1rem) calc(50% - 1rem);
+  /* grid-template-rows: 13.5rem 13.5rem; */
+  grid-template-rows: min-content;
+  grid-gap: 2rem;
+  width: 100%;
+  /* border: 3px solid red; */
+}
+.project {
+  height: 13.5rem;
+  display: flex;
+  justify-content: flex-start;
+  /* align-items: center; */
+  /* border: 1px solid magenta; */
+}
+.proj-img {
+  height: 11.5rem;
+  width: 20rem;
+  background-color: rgb(65, 63, 63);
+  border-radius: .75rem;
+}
+.proj-text {
+  width: 50%;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+.proj-title {
+  margin-bottom: .2rem;
+}
+/* .proj-desc {
+
+} */
+/* section projects end */
+
+/* section music start */
+.section-music {
+  width: 100%;
+  background-color: var(--color-three);
+  color: white;
+  padding-bottom: 4rem;
+}
+.music-heading {
+  height: 15%;
+  /* border: 2px solid magenta; */
+}
+.music-heading h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 2rem 0 0 2rem;
+}
+.music-container {
+  height: 85%;
+  width: 90%;
+  margin: 0 auto;
+  /* padding-top: 1.5rem;
+  padding-left: 1.5rem; */
+  /* padding-right: 1.5rem; */
+  display: flex;
+  /* justify-content: flex-end; */
+  justify-content: center;
+  align-items: flex-start;
+  /* border: 2px solid green; */
+}
+.music-img {
+  /* margin-top: 3rem; */
+  height: 23rem;
+  width: 17.5rem;
+  object-fit: fill;
+  border-radius: 2rem;
+  margin-right: 2rem;
+  align-self: center;
+}
+.music-text {
+  /* padding: 0 3rem 0 4rem; */
+  margin-left: 2%;
+  padding: 0 2%;
+  height: 100%;
+  width: 80%;
+  /* border: 2px solid white; */
+}
+.music-title {
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: white;
+  width: min-content;
+}
+.songs-container {
+  margin-top: 2rem;
+  display: flex;
+  /* border: 2px solid pink; */
+}
+.songs-grid {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  grid-template-areas:
+    "song1 song2"
+    "song3 song4"
+    "song5 song6";
+  /* border: 1px solid magenta; */
+}
+.song {
+  border-radius: .5rem;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: .5rem;
+  /* border: 1px solid white; */
+}
+.song-1 {  grid-area: song1;  }
+.song-2 {  grid-area: song2;  }
+.song-3 {  grid-area: song3;  }
+.song-4 {  grid-area: song4;  }
+.song-buffer {
+  margin-top: 4%;
+  justify-self: center;
+  width: 96%;
+  /* border: 1px solid red; */
+}
+.waveform {
+  /* padding: 5% .5rem 0 .5rem; */
+  width: 100%;
+}
+.controls {
+  margin-top: 2%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 30%;
+  width: 100%;
+  /* border: 1px solid blue; */
+}
+.music-icon {
+  margin: 0;
+  padding: 0;
+  margin: 0 .5rem;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  object-fit: contain;
+}
+.play {
+  margin-left: .75rem;
+}
+
+/* section music end */
+
+/* section contact start */
+.section-contact {
+  /* variables for margin spacing */
+  --web-title-margin: 17rem;
+  --music-title-margin: 10rem;
+  --web-img-margin: 38rem;
+  --music-img-margin: 35rem;
+
+  width: 100%;
+  background-color: var(--color-seven);
+  padding-bottom: 2rem;
+}
+.contact-container {
+  padding-top: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* border: 5px solid green; */
+}
+.contact-contents {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: 3px solid magenta; */
+}
+.contents-web {
+  margin: 0 auto;
+}
+.contents-music {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.contact-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  width: max-content;
+  /* border: 1px solid blue; */
+}
+.contents-web h3 {
+  margin-right: var(--web-title-margin);
+  margin-bottom: 2rem;
+}
+.contents-music h3 {
+  margin-left: var(--music-title-margin);
+  order: 2;
+}
+.contact-contents img {
+  height: 13rem;
+  /* border: solid 1px black; */
+}
+.contact-business-img {
+  margin-right: var(--web-img-margin);
+}
+.contact-music-img {
+  margin-left: var(--music-img-margin);
+  order: 1;
+  margin-bottom: 2rem;
+}
+.erick-email {
+  width: min-content;
+  margin: 0 auto;
+  background-color: var(--color-two);
+  border-radius: .75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  padding: .5rem 0;
+  transition: all 0.2s ease-out;
+  box-shadow: var(--box-shadow);
+}
+.erick-email:hover {
+  cursor: pointer;
+  transform: translateY(-.2rem);
+}
+.erick-email h3 {
+  background-color: var(--color-two);
+  width: 20rem;
+  height: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  border-radius: .75rem;
+}
+/* section contact end */
+
+/* footer start */
+footer {
+  background-color: var(--color-two);
+  height: 12rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 2.5rem;
+}
+/* .name-container {
+  display: flex;
+  flex-direction: space-around;
+} */
+.name-container {
+  margin-left: 17%;
+}
+.name-container span {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.last {
+  margin-bottom: .75rem;
+}
+.name {
+  margin-top: .2rem;
+}
+.contact-links {
+  margin-right: 17%;
+}
+.contact-links p {
+  font-size: 1.25rem;
+}
+.contact-links ul {
+  display: flex;
+  margin-top: .65rem;
+}
+.contact-links li {
+  list-style: none;
+}
+.contact-links li a {
+  font-size: 2rem;
+  margin-right: .75rem;
+}
+/* footer end */
+
+/* responsive start */
+@media (max-width: 1400px) {
+  .nav-links li {
+    padding-right: 3rem;
+  }
+}
+@media (max-width: 1250px) {
+  .music-text {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+  }
+}
+@media (max-width: 1200px) {
+  nav {
+    justify-content: center;
+  }
+  .nav-links li:last-child {
+    padding-right: 0;
+  }
+  .intro-text {
+    right: -1rem;
+  }
+  .intro-web-dev {
+    left: -1rem;
+  }
+}
+@media (max-width: 1075px) {
+  .contact-title {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 1000px) {
+  .projects-container {
+    width: 90%;
+  }
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 0;
+  }
+  .proj-text {
+    margin-left: 2rem;
+  }
+}
+@media (max-width: 850px) {
+  .intro-greeting {
+    font-size: 2.5rem;
+  }
+  .erick {
+    font-size: 3.25rem;
+  }
+  .intro-title {
+    font-size: 1.25rem;
+  }
+  .intro-music-producer {
+    left: 1rem;
+  }
+  .intro-description {
+    font-size: 1rem;
+  }
+  .intro-img-container {
+    width: min-content;
+    margin-left: 1rem;
+  }
+  .intro-img {
+    height: 25rem;
+    width: 20rem;
+    left: 0;
+  }
+  .project {
+    height: 8rem;
+    margin-bottom: 1rem;
+  }
+  .proj-img {
+    height: 8rem;
+    width: 14rem;
+  }
+  .section-contact {
+    /* variables for contact section margins */
+    --web-title-margin: 10rem;
+    --music-title-margin: 10rem;
+    --web-img-margin: 26rem;
+    --music-img-margin: 28rem;
+  }
+  .contact-title {
+    font-size: 2.5rem;
+  }
+  .contact-contents img {
+    height: 12rem;
+  }
+  /* .contents-web h3 {
+    --web-title-margin: 0;
+    margin-right: var(--web-title-margin);
+  }
+  .contents-music h3 {
+    margin-left: var(--music-title-margin);
+    border: 2px solid blue;
+  }
+  .contact-music-img {
+    margin-left: var(--music-img-margin);
+  }
+  .contact-business-img {
+    margin-right: var(--web-img-margin);
+  } */
+}
+@media (max-width: 800px) {
+  .projects-heading h1 {
+    font-size: 2.5rem;
+  }
+  .proj-desc {
+    font-size: .6rem;
+  }
+  .music-heading h1 {
+    font-size: 2.5rem;
+  }
+  .music-title {
+    font-size: 1.75rem;
+  }
+  .music-img {
+    width: 15rem;
+    height: 20rem;
+  }
+  .music-title {
+    margin-top: 1rem;
+  }
+  .songs-container {
+    margin-top: 1rem;
+  }
+  .erick-email h2 {
+    font-size: 1rem;
+  }
+  .erick-email h3 {
+    font-size: .95rem;
+  }
+}
+@media (max-width: 700px) {
+  header {
+    height: min-content;
+    padding-bottom: 3rem;
+  }
+  .intro-container {
+    flex-direction: column;
+    height: min-content;
+  }
+  .intro-text {
+    height: fit-content;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    width: 100%;
+    right: 0;
+  }
+  .intro-img-container {
+    margin-left: 0;
+  }
+  .projects-heading {
+    font-size: 2rem;
+  }
+  .music-heading {
+    font-size: 2rem;
+  }
+  .music-img {
+    width: 12rem;
+    height: 18rem;
+    margin-right: 1rem;
+  }
+  .contact-container {
+    flex-direction: column;
+    /* border: 3px solid green; */
+  }
+  /* .contact-contents {
+    border: 2px solid magenta;
+  } */
+  .contact-contents h3, .contact-contents img {
+    margin: 0;
+  } 
+  .contents-web h3 {
+    margin-bottom: 1rem;
+  }
+  .contents-music h3 {
+    order: 1;
+    margin: 1rem 0;
+  }
+  .contents-music {
+    position: relative;
+    left: 0;
+    transform: none;
+  }
+  .name-container span {
+    font-size: 1rem;
+  }
+  .name-container p {
+    font-size: .7rem;
+  }
+  .contact-links {
+    font-size: 1rem;
+  }
+  .contact-links li a {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 550px) {
+  .social-links li a {
+    font-size: 2rem;
+  }
+  .intro-text {
+    margin-bottom: 2rem;
+  }
+  .name-container {
+    margin: 0 auto;
+  }
+  .contact-links {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 500px) {
+  .nav-links li {
+    padding-right: 1.5rem;
+  }
+  .nav-links li a {
+    font-size: 1rem;
+  }
+  .music-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .music-text {
+    width: 100%;
+    padding: 0 3%;
+  }
+  .project {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: min-content;
+  }
+  .proj-img {
+    width: 85%;
+    height: 10rem;
+  }
+  .project:not(:first-child) {
+    margin-top: 1rem;
+  }
+  .proj-text {
+    width: 85%;
+  }
+  .projects-heading h1 {
+    padding-left: 0;
+    text-align: center;
+  }  
+  .music-heading h1 {
+    padding-left: 0;
+    text-align: center;
+  }
+  .music-title {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+  }
+  .music-img {
+    width: 15rem;
+    height: 20rem;
+    margin: 2rem 0 0 0;
+  }
+  .songs-grid {
+    column-gap: .75rem;
+  }
+  .contact-title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 400px) {
+  .contact-title {
+    font-size: 1.75rem;
+  }
+  footer {
+    height: min-content;
+    flex-direction: column;
+    padding-bottom: 2rem;
+  }
+  .contact-links {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .name-container {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .proj-title {
+    font-size: 1rem;
+  }
+  .proj-desc {
+    font-size: .5rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .nav-links li a {
+    font-size: .9rem;
+  }
+  .intro-img {
+    height: 21rem;
+    width: 15rem;
+  }
+  .erick-email {
+    padding: .5rem .5rem;
+  }
+  .erick-email h3 {
+    width: min-content;
+  }
+}
+
+/* responsive end */

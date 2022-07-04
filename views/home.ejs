@@ -6,28 +6,277 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Erick Alvarez</title>
 
-    <link rel="stylesheet" href="/styles/home.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
   </head>
   <body>
     <!-- header start -->
     <header>
-      <h1>Hi, I'm <span>Erick</span></h1>
-      <div class="header-design"></div>
-      <img id="erick-img" src="/imgs/erick.JPG" alt="erick in LA" />
+      <!-- navbar start -->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/#web-dev">Web Dev</a></li>
+          <li><a href="/#music">Music</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- navbar end -->
+      <div class="intro-container">
+        <div class="intro-text">
+          <h1 class="intro-greeting">
+            Hi, I'm <span class="erick">Erick</span>
+          </h1>
+          <p class="intro-web-dev intro-title">Web Developer</p>
+          <p class="intro-music-producer intro-title">Music Producer</p>
+          <p class="intro-description">
+            Passion for Building.&nbsp;&nbsp;&nbsp;Love for Music.
+          </p>
+          <ul class="social-links">
+            <li>
+              <a href="https://github.com/seekay505" target="_blank"
+                ><ion-icon name="logo-github"></ion-icon
+              ></a>
+              <!-- <a href="#"><ion-icon name="logo-twitter"></ion-icon></a> -->
+              <a href="https://www.instagram.com/_seekayy/" target="_blank"
+                ><ion-icon name="logo-instagram"></ion-icon
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/erick505alvarez"
+                target="_blank"
+                ><ion-icon name="logo-linkedin"></ion-icon
+              ></a>
+              <!-- <a href="#"><ion-icon name="logo-facebook"></ion-icon></a> -->
+              <!-- <a href="#"><ion-icon name="logo-tiktok"></ion-icon></a> -->
+              <a href="https://soundcloud.com/seekay-beats" target="_blank"
+                ><ion-icon name="logo-soundcloud"></ion-icon
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <div class="intro-img-container">
+          <img class="intro-img" src="imgs/producer.svg" alt="" />
+        </div>
+      </div>
     </header>
     <!-- header end -->
-    <!-- navbar start -->
-    <nav>
-      <a class="logo" href="#">Erick Alvarez</a>
-      <ul class="nav-links">
-        <li><a href="#">Web Dev</a></li>
-        <li><a href="#">Music</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-      <a href="#"><button class="contact">Contact</button></a>
-    </nav>
-    <!-- navbar end -->
 
-    <h1>Erick Alvarez Personal Website</h1>
+    <!-- section projects start -->
+    <section class="section-projects" id="web-dev">
+      <div class="projects-heading">
+        <h1>Web Projects</h1>
+      </div>
+      <div class="projects-container">
+        <div class="projects-grid">
+          <div class="project">
+            <div class="proj-img"></div>
+            <div class="proj-text">
+              <h3 class="proj-title">Coming Soon</h3>
+              <p class="proj-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Officiis consequuntur explicabo possimus corrupti officia
+                exercitationem error ut ab deleniti ad.
+              </p>
+            </div>
+          </div>
+          <div class="project">
+            <div class="proj-img"></div>
+            <div class="proj-text">
+              <h3 class="proj-title">Coming Soon</h3>
+              <p class="proj-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Officiis consequuntur explicabo possimus corrupti officia
+                exercitationem error ut ab deleniti ad.
+              </p>
+            </div>
+          </div>
+          <div class="project">
+            <div class="proj-img"></div>
+            <div class="proj-text">
+              <h3 class="proj-title">Coming Soon</h3>
+              <p class="proj-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Officiis consequuntur explicabo possimus corrupti officia
+                exercitationem error ut ab deleniti ad.
+              </p>
+            </div>
+          </div>
+          <div class="project">
+            <div class="proj-img"></div>
+            <div class="proj-text">
+              <h3 class="proj-title">Coming Soon</h3>
+              <p class="proj-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Officiis consequuntur explicabo possimus corrupti officia
+                exercitationem error ut ab deleniti ad.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section projects end -->
+
+    <!-- music section start -->
+    <section class="section-music" id="music">
+      <div class="music-heading">
+        <h1>Music Production</h1>
+      </div>
+      <div class="music-container">
+        <img class="music-img" src="imgs/recording-small.jpg" alt="" />
+        <div class="music-text">
+          <h3 class="music-title">seekay</h3>
+          <div class="songs-container">
+            <div class="songs-grid">
+              <div class="song song-1">
+                <div class="song-buffer">
+                  <div class="waveform" id="waveform-1"></div>
+                </div>
+                <div class="controls">
+                  <ion-icon class="music-icon play" name="play"></ion-icon>
+                  <ion-icon class="music-icon pause" name="pause"></ion-icon>
+                  <ion-icon class="music-icon stop" name="stop"></ion-icon>
+                </div>
+              </div>
+              <div class="song song-2">
+                <div class="song-buffer">
+                  <div class="waveform" id="waveform-2"></div>
+                </div>
+                <div class="controls">
+                  <ion-icon class="music-icon play" name="play"></ion-icon>
+                  <ion-icon class="music-icon pause" name="pause"></ion-icon>
+                  <ion-icon class="music-icon stop" name="stop"></ion-icon>
+                </div>
+              </div>
+              <div class="song song-3">
+                <div class="song-buffer">
+                  <div class="waveform" id="waveform-3"></div>
+                </div>
+                <div class="controls">
+                  <ion-icon class="music-icon play" name="play"></ion-icon>
+                  <ion-icon class="music-icon pause" name="pause"></ion-icon>
+                  <ion-icon class="music-icon stop" name="stop"></ion-icon>
+                </div>
+              </div>
+              <div class="song song-4">
+                <div class="song-buffer">
+                  <div class="waveform" id="waveform-4"></div>
+                </div>
+                <div class="controls">
+                  <ion-icon class="music-icon play" name="play"></ion-icon>
+                  <ion-icon class="music-icon pause" name="pause"></ion-icon>
+                  <ion-icon class="music-icon stop" name="stop"></ion-icon>
+                </div>
+              </div>
+              <div class="song song-5">
+                <div class="song-buffer">
+                  <div class="waveform" id="waveform-5"></div>
+                </div>
+                <div class="controls">
+                  <ion-icon class="music-icon play" name="play"></ion-icon>
+                  <ion-icon class="music-icon pause" name="pause"></ion-icon>
+                  <ion-icon class="music-icon stop" name="stop"></ion-icon>
+                </div>
+              </div>
+              <div class="song song-6">
+                <div class="song-buffer">
+                  <div class="waveform" id="waveform-6"></div>
+                </div>
+                <div class="controls">
+                  <ion-icon class="music-icon play" name="play"></ion-icon>
+                  <ion-icon class="music-icon pause" name="pause"></ion-icon>
+                  <ion-icon class="music-icon stop" name="stop"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- music section end -->
+
+    <!-- contact section start -->
+    <section class="section-contact">
+      <div class="contact-container">
+        <div class="contact-contents contents-web">
+          <h3 class="contact-title">I'll Build Your Website</h3>
+          <img
+            src="./imgs/business-illustration.svg"
+            alt="business illustration"
+            class="contact-business-img"
+          />
+        </div>
+        <div class="contact-contents contents-music">
+          <h3 class="contact-title">I'll Produce Your Beat</h3>
+
+          <img
+            src="./imgs/guitar-illustration.svg"
+            alt="guitar illustration"
+            class="contact-music-img"
+          />
+        </div>
+      </div>
+      <a
+        href="mailto:erickalvarezwebdev@gmail.com?Subject=Website%20Request"
+        class="erick-email"
+      >
+        <h2>Let's Chat</h2>
+        <h3>erickalvarezwebdev@gmail.com</h3>
+      </a>
+    </section>
+    <!-- contact section end -->
+
+    <!-- footer start -->
+    <footer id="contact">
+      <!-- <div class="name-container"> -->
+      <div class="name-container">
+        <span class="first">Erick</span><span class="last">Alvarez</span>
+        <p>&copy; 2022, Built and designed by</p>
+        <p class="name">Erick Alvarez</p>
+      </div>
+      <div class="contact-links">
+        <p>Get in touch</p>
+        <ul>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/erick505alvarez"
+              target="_blank"
+              ><ion-icon name="logo-linkedin"></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/_seekayy/" target="_blank"
+              ><ion-icon name="logo-instagram"></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/seekay505" target="_blank"
+              ><ion-icon name="logo-github"></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a
+              href="mailto:erickalvarezwebdev@gmail.com?Subject=Website%20Request"
+              target="_blank"
+              ><ion-icon name="mail"></ion-icon
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <!-- </div> -->
+    </footer>
+    <!-- footer end -->
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- <script src="https://unpkg.com/wavesurfer.js"></script> -->
+    <script src="./scripts/wavesurfer.js"></script>
+    <script src="./scripts/music.js"></script>
   </body>
 </html>

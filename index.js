@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const homeRouter = require("./routes/home");
+const aboutRouter = require("./routes/about");
 
 // tepmlate engine
 app.set("view engine", "ejs");
@@ -10,10 +12,10 @@ app.set("views", path.join(__dirname, "views")); // serve views folder
 app.use(express.static(path.join(__dirname, "public")));
 
 // routes
-app.get("/", (req, res) => {
-  //   res.send("Hello world!");
-  res.render("home.ejs");
-});
+// home routes
+app.use("/", homeRouter);
+// about routes
+app.use("/about", aboutRouter);
 
 const port = 3000;
 app.listen(port, () => {
