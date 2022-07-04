@@ -49,6 +49,11 @@ nav {
   display: inline;
   padding-right: 4.5rem;
 }
+
+.nav-links li a:hover{
+  color: rgba(256, 256, 256, .8);
+}
+
 .nav-links li a{
   text-decoration: none;
   color: white;
