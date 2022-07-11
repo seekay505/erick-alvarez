@@ -187,16 +187,17 @@ nav {
   /* align-items: center; */
   /* border: 1px solid magenta; */
 }
-.proj-img {
+.proj-img-bg {
+  height: 11.5rem;
+  min-width: 20rem;
+  background-color: rgb(65, 63, 63);
+  border-radius: .75rem;
+}
+.proj-img{
   height: 11.5rem;
   width: 20rem;
   background-color: rgb(65, 63, 63);
   border-radius: .75rem;
-}
-.project:nth-child(1) .proj-img img {
-  height: inherit;
-  width: inherit;
-  border-radius: inherit;
   object-fit: fill;
   filter: blur(3.5px);
 }
@@ -495,6 +496,9 @@ footer {
   }
   .intro-web-dev {
     left: -1rem;
+  }
+  .proj-desc {
+    font-size: .8rem;
   }
 }
 @media (max-width: 1075px) {
