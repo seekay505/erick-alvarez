@@ -99,7 +99,7 @@ nav {
 }
 .intro-title {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 2rem;
   color: black;
   text-align: center;
@@ -192,6 +192,13 @@ nav {
   width: 20rem;
   background-color: rgb(65, 63, 63);
   border-radius: .75rem;
+}
+.project:nth-child(1) .proj-img img {
+  height: inherit;
+  width: inherit;
+  border-radius: inherit;
+  object-fit: fill;
+  filter: blur(3.5px);
 }
 .proj-text {
   width: 50%;

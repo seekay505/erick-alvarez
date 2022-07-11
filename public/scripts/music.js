@@ -19,7 +19,8 @@ const waveform_params = {
     hideScrollbar: true,
     cursorColor: '#000',
     responsive: true,
-    normalize: true
+    normalize: true,
+    backend: 'MediaElement'
 }
 // create wavesurger objects
 waveform_params['container'] = '#waveform-1'
