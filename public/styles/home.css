@@ -409,6 +409,7 @@ nav {
   transition: all 0.2s ease-out;
   box-shadow: var(--box-shadow);
 }
+
 .erick-email:hover {
   cursor: pointer;
   transform: translateY(-.2rem);
@@ -420,6 +421,8 @@ nav {
   text-align: center;
   line-height: 2rem;
   border-radius: .75rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 /* section contact end */
 
